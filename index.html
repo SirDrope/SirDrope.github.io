@@ -28,7 +28,7 @@
                 padding-top: 20px;
                 margin: 20px;
                 text-align: center;
-                overflow-y: hidden;
+                /* overflow-y: hidden; */
                 overflow-x: hidden;
             }
             img {
@@ -39,6 +39,28 @@
                 padding-top: 0;
                 padding-left: 20px;
             }
+
+            #module {
+                font-size: 1rem;
+                line-height: 1.5;
+                padding: 0px;
+                margin-bottom: 10px;
+            }
+            #module #collapseExample.collapse:not(.show) {
+                display: block;
+                height: 6rem;
+                overflow: hidden;
+            }
+            #module #collapseExample.collapsing {
+                height: 6rem;
+            }
+            #module a.collapsed::after {
+                content: '+ Show More';
+            }
+            #module a:not(.collapsed)::after {
+                content: '- Show Less';
+            }
+
             .image {
                 display: block;
                 padding-top: 10px;
@@ -51,7 +73,11 @@
                 width: 55%;
                 text-align: center;
                 padding: 0px;
-                margin-top: -25px;
+                /* margin-top: -25px; */
+            }
+            .main {
+                padding: 0px;
+                padding-top: 10px;
             }
             .center {
                 margin: auto;
@@ -64,7 +90,7 @@
                 width: 50%;
                 text-align: center;
                 padding: 0px;
-                margin-top: -35px;
+                /* margin-top: -25px; */
             }
         </style>
         <title>Pedro Llanos Arroyo</title>
@@ -77,25 +103,28 @@
             <h2>Computer Science 🚀 and Computer Engineering 💻</h2>
             <h2>at Polytechnic University of Catalonia (UPC)</h2>
         </div>
-        <div class="">
+        <div class="main">
             <div class="image">
-                <img src="resource/yo.jpg" alt="me" height="310px" width="300px" />
+                <img src="resource/yo.jpg" alt="me" height="320px" width="320px" />
             </div>
             <div class="center">
-                <h6>
-                    I'm a Computer Science and Computer Engineering living in Barcelona. I'm interested in Artificial
-                    Intelligence Systems, Multi-Agents Systems, Fuzzy Logic, Deep Learning, Reinforcement Learning,
-                    Signals Processing - such as Image, Video, Sound, Speech, Position, Communications, Temperature,
-                    Humidity, Pressure, Touch, Lidar, Sonar, Laser -, Control Theory - such as Linear or Non-Linear PID
-                    Control Methods, Path Planning, Kalman Filter -, Dynamics Systems - such as Navier-Stokes equations
-                    -, Robotics - such as Flying, Floating, Leggeds, Wheels, Arms, Head -, Avionics, Satellites,
-                    Rockets, Space, 3D Heterogeneous Simulations with Dynamics Systems in Unreal Engine, Real-Time OS,
-                    Heterogeneous High-Performance Computing (HPC) - such as Local Cluster, Cloud Computing (Google
-                    Cloud, AWS, Azure), Edge Computing, Distributed Computing -, Decentralised or Distributed Systems -
-                    such as key-value MapReduce, Raft or Multi-Paxos consensus, Chubby, ZooKeeper, etcd3 -, Low-Power
-                    Hardware - such as MultiCore-DSP, VPU, FPGA Xilinx, Arm Neon and Mali GPU -, Design Schematic of
-                    Embedded Systems (PCB) - such as Kicad PCB Design, PCB Manufacturing -.
-                </h6>
+                <div id="module" class="container">
+                    <h6 class="collapse" id="collapseExample" aria-expanded="false">
+                        I'm a Computer Science and Computer Engineering living in Barcelona. I'm interested in Artificial
+                        Intelligence Systems, Multi-Agents Systems, Fuzzy Logic, Deep Learning, Reinforcement Learning,
+                        Signals Processing - such as Image, Video, Sound, Speech, Position, Communications, Temperature,
+                        Humidity, Pressure, Touch, Lidar, Sonar, Laser -, Control Theory - such as Linear or Non-Linear PID
+                        Control Methods, Path Planning, Kalman Filter -, Dynamics Systems - such as Navier-Stokes equations
+                        -, Robotics - such as Flying, Floating, Leggeds, Wheels, Arms, Head -, Avionics, Satellites,
+                        Rockets, Space, 3D Heterogeneous Simulations with Dynamics Systems in Unreal Engine, Real-Time OS,
+                        Heterogeneous High-Performance Computing (HPC) - such as Local Cluster, Cloud Computing (Google
+                        Cloud, AWS, Azure), Edge Computing, Distributed Computing -, Decentralised or Distributed Systems -
+                        such as key-value MapReduce, Raft or Multi-Paxos consensus, Chubby, ZooKeeper, etcd3 -, Low-Power
+                        Hardware - such as MultiCore-DSP, VPU, FPGA Xilinx, Arm Neon and Mali GPU -, Design Schematic of
+                        Embedded Systems (PCB) - such as Kicad PCB Design, PCB Manufacturing -.
+                    </h6>
+                    <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
+                </div>
                 <h6>
                     After a few years of preparation, the time has come. Today, I feel comfortable saying that I'm ready
                     to implement all those ideas that I have always wanted to do. At this stage, I will continue
@@ -110,15 +139,15 @@
         </div>
         <br />
         <div class="footer">
-            <h6>
+            <h5>
                 You can find the latest version of my <a href="./cv.html">web-cv</a> or
                 <a href="resource/cv.pdf">pdf-cv</a>.
-            </h6>
-            <h6>
+            </h5>
+            <h5>
                 <a href="mailto:pedro.llanos@estudiantat.upc.edu"> pedro.llanos@estudiantat.upc.edu </a>
                 <br />
                 <a href="https://github.com/SirDrope">sirdrope.github.io</a>
-            </h6>
+            </h5>
         </div>
 
         <!-- Bootstrap JS -->
