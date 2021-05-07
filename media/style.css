@@ -1,0 +1,73 @@
+body {
+    padding: 20px;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    /* overflow-y: hidden; */
+    overflow-x: hidden;
+}
+img {
+    float: center;
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+div {
+    padding-top: 0;
+    padding-left: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    border: 0;
+}
+
+.header {
+    padding: 0px;
+    text-align: center;
+}
+.center {
+    padding: 0px;
+    padding-top: 10px;
+    text-align: justify;
+}
+.footer {
+    padding: 0px;
+    text-align: center;
+}
+
+#module {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+#module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 3.5rem;
+    overflow: hidden;
+}
+#module #collapseExample.collapsing {
+    height: 6rem;
+}
+#module a.collapsed::after {
+    content: "+ Show More";
+}
+#module a:not(.collapsed)::after {
+    content: "- Show Less";
+}
